@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7476 
+INFO: Helper process launched with PID 15268 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 356.855 ; gain = 99.926
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.137 ; gain = 99.289
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
 INFO: [Synth 8-6157] synthesizing module 'MUX_21' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:23]
@@ -87,11 +87,12 @@ INFO: [Synth 8-226] default block is never used [C:/Users/Andre/Documents/GitHub
 INFO: [Synth 8-226] default block is never used [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:201]
 WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:349]
 INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (7#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
+WARNING: [Synth 8-689] width (1) of port connection 'teststate' does not match port width (5) of module 'Oled_Display' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:52]
 INFO: [Synth 8-6155] done synthesizing module 'DisplayModule' (8#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (9#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.266 ; gain = 154.336
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.254 ; gain = 154.406
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -104,10 +105,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.266 ; gain = 154.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.254 ; gain = 154.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.266 ; gain = 154.336
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.254 ; gain = 154.406
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -147,22 +148,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 706.965 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 707.152 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 706.965 ; gain = 450.035
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 707.152 ; gain = 450.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 706.965 ; gain = 450.035
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 707.152 ; gain = 450.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 706.965 ; gain = 450.035
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 707.152 ; gain = 450.305
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "new_clk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -207,7 +208,7 @@ INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 706.965 ; gain = 450.035
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 707.152 ; gain = 450.305
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -330,26 +331,25 @@ INFO: [Synth 8-5546] ROM "sample_clk/new_clk" won't be mapped to RAM because it 
 INFO: [Synth 8-5546] ROM "DM0/Oled_Display/fsm_next_state0" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3917] design Top_Student has port JC[7] driven by constant 1
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[0]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[1]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[2]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[3]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[4]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[5]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[6]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[7]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[8]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[9]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[10]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[11]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[12]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[13]' (FDSE) to 'DM0/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[14]' (FDSE) to 'DM0/oled_data_reg[15]'
-WARNING: [Synth 8-3332] Sequential element (oled_clk/clock_out_reg) is unused and will be removed from module Top_Student.
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[0]' (FDS) to 'DM0/oled_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[1]' (FDS) to 'DM0/oled_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[2]' (FDS) to 'DM0/oled_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[3]' (FDS) to 'DM0/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[4]' (FDS) to 'DM0/oled_data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[5]' (FDS) to 'DM0/oled_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[6]' (FDS) to 'DM0/oled_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[7]' (FDS) to 'DM0/oled_data_reg[8]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[8]' (FDS) to 'DM0/oled_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[9]' (FDS) to 'DM0/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[10]' (FDS) to 'DM0/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[11]' (FDS) to 'DM0/oled_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[12]' (FDS) to 'DM0/oled_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[13]' (FDS) to 'DM0/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'DM0/oled_data_reg[14]' (FDS) to 'DM0/oled_data_reg[15]'
 WARNING: [Synth 8-3332] Sequential element (res/dff1/Q_reg) is unused and will be removed from module Top_Student.
 WARNING: [Synth 8-3332] Sequential element (res/dff2/Q_reg) is unused and will be removed from module Top_Student.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 706.965 ; gain = 450.035
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 707.152 ; gain = 450.305
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -361,13 +361,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 734.598 ; gain = 477.668
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 738.117 ; gain = 481.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 796.094 ; gain = 539.164
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 758.355 ; gain = 501.508
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -379,7 +379,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 805.160 ; gain = 548.230
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 775.934 ; gain = 519.086
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -403,7 +403,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 805.160 ; gain = 548.230
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 775.934 ; gain = 519.086
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -416,7 +416,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 805.160 ; gain = 548.230
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 775.934 ; gain = 519.086
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -428,25 +428,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 805.160 ; gain = 548.230
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 775.934 ; gain = 519.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 805.160 ; gain = 548.230
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 775.934 ; gain = 519.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 805.160 ; gain = 548.230
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 775.934 ; gain = 519.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 805.160 ; gain = 548.230
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 775.934 ; gain = 519.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -462,16 +462,16 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
+|1     |BUFG   |     2|
 |2     |CARRY4 |    31|
-|3     |LUT1   |     7|
+|3     |LUT1   |     8|
 |4     |LUT2   |    69|
 |5     |LUT3   |    54|
-|6     |LUT4   |    38|
-|7     |LUT5   |    46|
-|8     |LUT6   |   125|
+|6     |LUT4   |    36|
+|7     |LUT5   |    41|
+|8     |LUT6   |   114|
 |9     |FDE_1  |    32|
-|10    |FDRE   |   134|
+|10    |FDRE   |   140|
 |11    |IBUF   |     3|
 |12    |OBUF   |    21|
 |13    |OBUFT  |     1|
@@ -481,19 +481,20 @@ Report Instance Areas:
 +------+-----------------+--------------+------+
 |      |Instance         |Module        |Cells |
 +------+-----------------+--------------+------+
-|1     |top              |              |   562|
+|1     |top              |              |   552|
 |2     |  DM0            |DisplayModule |   412|
-|3     |    Oled_Display |Oled_Display  |   383|
-|4     |  ac             |Audio_Capture |    89|
+|3     |    Oled_Display |Oled_Display  |   380|
+|4     |  ac             |Audio_Capture |    65|
 |5     |  mux_21         |MUX_21        |    12|
-|6     |  sample_clk     |clk_20k       |    22|
+|6     |  oled_clk       |clk_6p25m     |    13|
+|7     |  sample_clk     |clk_20k       |    22|
 +------+-----------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 805.160 ; gain = 548.230
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 775.934 ; gain = 519.086
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 805.160 ; gain = 252.531
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 805.160 ; gain = 548.230
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 775.934 ; gain = 223.188
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 775.934 ; gain = 519.086
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -506,9 +507,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 56 Infos, 15 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 805.160 ; gain = 561.094
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 775.934 ; gain = 532.125
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 805.160 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 16 11:56:36 2021...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.037 . Memory (MB): peak = 775.934 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 16 15:32:46 2021...

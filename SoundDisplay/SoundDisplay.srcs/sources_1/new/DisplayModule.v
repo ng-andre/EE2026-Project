@@ -21,7 +21,7 @@
 
 
 module DisplayModule(
-    input clk6p25m, active, 
+    input clk6p25m,  
     output cs, sdin, sclk, d_cn, resn, vccen, pmoden//output of OLED display
     );
     
@@ -30,23 +30,25 @@ module DisplayModule(
     wire [12:0] pixel_index; // 0 to 6143, 96x64 pixels
     reg [6:0] x = 0;
     reg [6:0] y = 0;
+    reg reset = 0;
     
-    Oled_Display Oled_Display (clk6p25m, 0, , , , pixel_index, oled_data, cs, sdin, sclk, d_cn, resn, vccen,
-    pmoden,);
-              
+    wire frame_begin, sending_pixels, sample_pixel, teststate;
 
-    always @ (posedge clk6p25m) begin
-    
-    
-        if (active) begin
-            if ((pixel_index % 96) == 0)
-                 oled_data <= 16'b1111111111111111;//border_colour;
-             else if ((pixel_index % 96) == 95)
-                 oled_data <= 16'b1111111111111111;// border_colour;
-             else if ((pixel_index / 96) == 0)
-                 oled_data <= 16'b1111111111111111;// border_colour;
-             else if ((pixel_index / 96) == 63)
-                 oled_data <= 16'b1111111111111111;// border_colour;
-        end
+    always @ (posedge clk6p25m) begin    
+        if ((pixel_index % 96) == 0)
+             oled_data <= 16'b1111111111111111;//border_colour;
+        else if ((pixel_index % 96) == 95)
+             oled_data <= 16'b1111111111111111;// border_colour;
+        else if ((pixel_index / 96) == 0)
+             oled_data <= 16'b1111111111111111;// border_colour;
+        else if ((pixel_index / 96) == 63)
+             oled_data <= 16'b1111111111111111;// border_colour;       
+         else 
+            oled_data <= 16'b0;
     end
+        
+    Oled_Display Oled_Display (clk6p25m, reset, frame_begin, sending_pixels,
+      sample_pixel, pixel_index, oled_data, cs, sdin, sclk, d_cn, resn, vccen,
+      pmoden,teststate);
+      
 endmodule

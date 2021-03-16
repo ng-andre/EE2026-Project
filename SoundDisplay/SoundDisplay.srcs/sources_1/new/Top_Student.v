@@ -36,7 +36,7 @@ module Top_Student (
     clk_6p25m oled_clk (CLK100MHZ, clk625);
     resetswitch res (clk625, btnC, reset_active);
 //    Oled_Display disp (clk625, reset_active,,,,, {mic_in[11:7], 6'b0, mic_in[11:7]}, JC[0], JC[1], JC[3], JC[4], JC[5], JC[6], JC[7],);
-    DisplayModule DM0 (CLK100MHZ, 1, JC[0], JC[1], JC[3], JC[4], JC[5], JC[6], JC[7]);
+    DisplayModule DM0 (clk625, JC[0], JC[1], JC[3], JC[4], JC[5], JC[6], JC[7]);
     
     
     
