@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue Mar 16 09:41:21 2021
+| Date         : Tue Mar 16 11:57:37 2021
 | Host         : Riptide running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    11 |
-| Unused register locations in slices containing registers |    30 |
+| Number of unique control sets                            |    10 |
+| Unused register locations in slices containing registers |    20 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,8 +35,8 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      2 |            1 |
-|      4 |            1 |
-|    16+ |            9 |
+|      8 |            1 |
+|    16+ |            8 |
 +--------+--------------+
 
 
@@ -46,32 +46,31 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              72 |           14 |
+| No           | No                    | No                     |              58 |            9 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             170 |           26 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | Yes                   | No                     |             170 |           33 |
+| Yes          | No                    | No                     |             104 |           15 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             104 |           14 |
+| Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+-----------------------------------+--------------------------------------+------------------+----------------+
-|     Clock Signal     |           Enable Signal           |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
-+----------------------+-----------------------------------+--------------------------------------+------------------+----------------+
-| ~clk625_BUFG         |                                   |                                      |                1 |              2 |
-|  clk625_BUFG         |                                   |                                      |                2 |              4 |
-|  CLK100MHZ_IBUF_BUFG |                                   |                                      |                3 |             18 |
-|  CLK100MHZ_IBUF_BUFG |                                   | sample_clk/new_clk                   |                3 |             22 |
-| ~ac/J_MIC_Pin4_OBUF  |                                   |                                      |                4 |             24 |
-|  sample_clk/CLK      |                                   |                                      |                4 |             24 |
-|  CLK100MHZ_IBUF_BUFG |                                   | sample_clk/CLK                       |                3 |             24 |
-| ~clk625_BUFG         |                                   | res/dff1/reset_active                |                6 |             34 |
-| ~clk625_BUFG         | disp/delay[0]_i_1_n_0             | res/dff1/reset_active                |                5 |             40 |
-| ~clk625_BUFG         | disp/FSM_onehot_state[31]_i_2_n_0 | res/dff1/reset_active                |                9 |             64 |
-| ~clk625_BUFG         |                                   | res/dff2/spi_word_bit_count_reg[5]_0 |               14 |             90 |
-+----------------------+-----------------------------------+--------------------------------------+------------------+----------------+
++----------------------+-----------------------------------+--------------------------------------------+------------------+----------------+
+|     Clock Signal     |           Enable Signal           |              Set/Reset Signal              | Slice Load Count | Bel Load Count |
++----------------------+-----------------------------------+--------------------------------------------+------------------+----------------+
+| ~CLK100MHZ_IBUF_BUFG |                                   |                                            |                1 |              2 |
+|  CLK100MHZ_IBUF_BUFG |                                   |                                            |                3 |              8 |
+|  CLK100MHZ_IBUF_BUFG |                                   | sample_clk/new_clk                         |                3 |             22 |
+| ~ac/J_MIC_Pin4_OBUF  |                                   |                                            |                2 |             24 |
+|  sample_clk/CLK      |                                   |                                            |                3 |             24 |
+|  CLK100MHZ_IBUF_BUFG |                                   | sample_clk/CLK                             |                3 |             24 |
+| ~CLK100MHZ_IBUF_BUFG |                                   | DM0/Oled_Display/frame_counter[16]_i_1_n_0 |               12 |             34 |
+| ~CLK100MHZ_IBUF_BUFG | DM0/Oled_Display/delay[0]_i_1_n_0 |                                            |                5 |             40 |
+| ~CLK100MHZ_IBUF_BUFG | DM0/Oled_Display/state            |                                            |               10 |             64 |
+| ~CLK100MHZ_IBUF_BUFG |                                   | DM0/Oled_Display/spi_word[39]_i_1_n_0      |               15 |             90 |
++----------------------+-----------------------------------+--------------------------------------------+------------------+----------------+
 
 
