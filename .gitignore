@@ -5,6 +5,10 @@
 *.xml
 *.wdf
 /SoundDisplay/SoundDisplay.cache/
+/SoundDisplay/SoundDisplay.cache/*
 /SoundDisplay/SoundDisplay.ip_user_files/
+/SoundDisplay/SoundDisplay.ip_user_files/*
 /SoundDisplay/SoundDisplay.hw/
+/SoundDisplay/SoundDisplay.hw/*
 /SoundDisplay/.Xil/
+/SoundDisplay/.Xil/*
