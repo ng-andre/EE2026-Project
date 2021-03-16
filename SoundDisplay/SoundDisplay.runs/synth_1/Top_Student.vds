@@ -2,12 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Mar 15 23:50:31 2021
-# Process ID: 18696
-# Current directory: D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.runs/synth_1
+# Start of session at: Tue Mar 16 09:39:56 2021
+# Process ID: 8132
+# Current directory: C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/synth_1
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
-# Log file: D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.vds
-# Journal file: D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.runs/synth_1\vivado.jou
+# Log file: C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.vds
+# Journal file: C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Top_Student.tcl -notrace
 Command: synth_design -top Top_Student -part xc7a35tcpg236-1
@@ -15,24 +15,24 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13464 
+INFO: Helper process launched with PID 12184 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 356.578 ; gain = 99.570
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.461 ; gain = 99.531
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top_Student' [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
-INFO: [Synth 8-6157] synthesizing module 'MUX_21' [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'MUX_21' (1#1) [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_20k' [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_20k.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'clk_20k' (2#1) [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_20k.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'Audio_Capture' (3#1) [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
-INFO: [Synth 8-6157] synthesizing module 'clk_6p25m' [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_6p25m.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'clk_6p25m' (4#1) [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_6p25m.v:23]
-INFO: [Synth 8-6157] synthesizing module 'resetswitch' [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/resetswitch.v:23]
-INFO: [Synth 8-6157] synthesizing module 'd_flipflop' [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/d_flipflop.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'd_flipflop' (5#1) [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/d_flipflop.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'resetswitch' (6#1) [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/resetswitch.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
+INFO: [Synth 8-6157] synthesizing module 'MUX_21' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX_21' (1#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_20k' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_20k.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clk_20k' (2#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_20k.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'Audio_Capture' (3#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
+INFO: [Synth 8-6157] synthesizing module 'clk_6p25m' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_6p25m.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clk_6p25m' (4#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_6p25m.v:23]
+INFO: [Synth 8-6157] synthesizing module 'resetswitch' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/resetswitch.v:23]
+INFO: [Synth 8-6157] synthesizing module 'd_flipflop' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/d_flipflop.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'd_flipflop' (5#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/d_flipflop.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'resetswitch' (6#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/resetswitch.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
 	Parameter PixelCount bound to: 6144 - type: integer 
@@ -83,14 +83,14 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [D:/Sem 2/EE2026/Project
 	Parameter SendPixel bound to: 5'b10000 
 	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
 	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
-INFO: [Synth 8-226] default block is never used [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:124]
-INFO: [Synth 8-226] default block is never used [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:201]
-WARNING: [Synth 8-693] zero replication count - replication ignored [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:349]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (7#1) [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (8#1) [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
+INFO: [Synth 8-226] default block is never used [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:124]
+INFO: [Synth 8-226] default block is never used [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:201]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:349]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (7#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (8#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.184 ; gain = 154.176
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.371 ; gain = 154.441
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -103,65 +103,65 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 411.184 ; gain = 154.176
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.371 ; gain = 154.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 411.184 ; gain = 154.176
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 411.371 ; gain = 154.441
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:71]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:71]
+Parsing XDC File [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:71]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:72]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:72]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:73]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:73]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:74]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:74]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:75]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:75]
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:75]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:76]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:76]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:77]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:77]
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:77]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:78]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:78]
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:78]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
+Finished Parsing XDC File [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 706.191 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 705.543 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 706.191 ; gain = 449.184
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 705.543 ; gain = 448.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 706.191 ; gain = 449.184
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 705.543 ; gain = 448.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 706.191 ; gain = 449.184
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 705.543 ; gain = 448.613
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "new_clk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -206,7 +206,7 @@ INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 706.191 ; gain = 449.184
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 705.543 ; gain = 448.613
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -320,7 +320,7 @@ INFO: [Synth 8-5546] ROM "sample_clk/new_clk" won't be mapped to RAM because it 
 INFO: [Synth 8-5546] ROM "disp/fsm_next_state0" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 706.191 ; gain = 449.184
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 705.543 ; gain = 448.613
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -332,13 +332,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 737.281 ; gain = 480.273
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 735.129 ; gain = 478.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 757.508 ; gain = 500.500
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 755.156 ; gain = 498.227
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -350,7 +350,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 765.543 ; gain = 508.535
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 763.602 ; gain = 506.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -374,7 +374,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 765.543 ; gain = 508.535
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 763.602 ; gain = 506.672
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -387,7 +387,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 765.543 ; gain = 508.535
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 763.602 ; gain = 506.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -399,25 +399,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 765.543 ; gain = 508.535
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 763.602 ; gain = 506.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 765.543 ; gain = 508.535
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 763.602 ; gain = 506.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 765.543 ; gain = 508.535
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 763.602 ; gain = 506.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 765.543 ; gain = 508.535
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 763.602 ; gain = 506.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -464,11 +464,11 @@ Report Instance Areas:
 |8     |  sample_clk |clk_20k       |    22|
 +------+-------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 765.543 ; gain = 508.535
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 763.602 ; gain = 506.672
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 765.543 ; gain = 213.527
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 765.543 ; gain = 508.535
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 763.602 ; gain = 212.500
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 763.602 ; gain = 506.672
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 53 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -482,9 +482,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 39 Infos, 11 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 765.543 ; gain = 521.539
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 763.602 ; gain = 519.723
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'D:/Sem 2/EE2026/Project/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 765.543 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 15 23:51:15 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 763.602 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 16 09:40:32 2021...
