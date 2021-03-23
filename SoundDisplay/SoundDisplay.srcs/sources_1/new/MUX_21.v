@@ -22,8 +22,11 @@
 
 module MUX_21(
     input sw,
+    input sclk,
     input [11:0] mic_in,
     output [11:0] led
     );
-    assign led = sw ? 0 : mic_in;
+    wire levels, peak_vol;
+    volume_display vol_d(sclk, mic_in, levels, peak_vol);
+    assign led = sw ? peak_vol : mic_in;
 endmodule

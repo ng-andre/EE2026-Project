@@ -23,7 +23,7 @@
 module DisplayModule(
     input clk6p25m,
     output cs, sdin, sclk, d_cn, resn, vccen, pmoden,//output of OLED display
-    input border_switch
+    input border_switch, input volume_active, input [11:0] audio_in
     );
     
     reg [15:0] colour_data;
@@ -35,33 +35,59 @@ module DisplayModule(
     
     wire frame_begin, sending_pixels, sample_pixel, teststate;
 
+    //colour data
+    parameter [15:0] green_bar = 16'h47E0;
+    parameter [15:0] yellow_bar = 16'hFF60;
+    parameter [15:0] red_bar = 16'hF800;
+
+
+
+
     always @ (posedge clk6p25m) begin    
+        //border
+        y = pixel_index / 96;
+        x = pixel_index % 96;
         if (border_switch) begin //3 pixel wide border
-        
-            if ((pixel_index % 96) == 0 || (pixel_index % 96) == 1 || (pixel_index % 96) == 2)
+            if (y == 0 || y == 1 || y == 2)
                  oled_data <= 16'b1111111111111111;//border_colour;
-            else if ((pixel_index % 96) == 95 || (pixel_index % 96) == 94 || (pixel_index % 96) == 93)
+            else if (y == 63 || y == 62 || y == 61)
                  oled_data <= 16'b1111111111111111;// border_colour;
-            else if ((pixel_index / 96) == 0 || (pixel_index / 96) == 1 || (pixel_index / 96) == 2)
+            else if (x == 0 || x == 1 || x == 2)
                  oled_data <= 16'b1111111111111111;// border_colour;
-            else if ((pixel_index / 96) == 63 || (pixel_index / 96) == 62 || (pixel_index / 96) == 61)
+            else if (x == 95 || x == 94 || x == 93)
                  oled_data <= 16'b1111111111111111;// border_colour;       
             else 
                 oled_data <= 16'b0;
         end
-        else begin
-            if ((pixel_index % 96) == 0)
+        else if (~border_switch) begin //1 pixel wide border
+            if (y == 0)
                  oled_data <= 16'b1111111111111111;//border_colour;
-            else if ((pixel_index % 96) == 95)
+            else if (y == 63)
                  oled_data <= 16'b1111111111111111;// border_colour;
-            else if ((pixel_index / 96) == 0)
+            else if (x == 0)
                  oled_data <= 16'b1111111111111111;// border_colour;
-            else if ((pixel_index / 96) == 63)
+            else if (x == 95)
                  oled_data <= 16'b1111111111111111;// border_colour;       
-             else 
+            else 
                 oled_data <= 16'b0;
         end
-        
+        //volume bar
+        if (volume_active) begin //switch
+            if (x > 42 && x < 53) begin
+                if ((y == 55 || y == 54) && audio_in[0])  
+                    oled_data = green_bar;
+                else if ((y == 52 || y == 51) && audio_in[1])
+                    oled_data = green_bar;
+                else if ((y == 49 || y == 48) && audio_in[2])
+                    oled_data = green_bar;
+                else if ((y == 46 || y == 45) && audio_in[3])
+                    oled_data = green_bar;     
+                else 
+                    oled_data <= 16'b0;
+                end
+            
+            
+        end
     end
         
     Oled_Display Oled_Display (clk6p25m, reset, frame_begin, sending_pixels,
