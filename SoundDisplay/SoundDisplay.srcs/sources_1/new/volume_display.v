@@ -26,7 +26,7 @@ module volume_display(
     //output reg [3:0] an,
     //output reg [7:0] seg,
     output reg [3:0] levels,
-    output reg [15:0] led
+    output reg [15:0] lights
     );
     
     reg [11:0] max;
@@ -74,7 +74,7 @@ module volume_display(
 
             //  
              
-            led <= ((2 ** levels) | ((2 ** levels) -1));
+            lights <= ((2 ** levels) | ((2 ** levels) -1));
             max = 0;
         end
     

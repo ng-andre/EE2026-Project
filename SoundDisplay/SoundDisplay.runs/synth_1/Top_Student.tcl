@@ -17,8 +17,11 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache C:/Users/Andre/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8808-Riptide/incrSyn
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -30,6 +33,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+read_mem C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/picture.mem
 read_verilog -library xil_defaultlib {
   C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v
   C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v
@@ -39,6 +43,8 @@ read_verilog -library xil_defaultlib {
   C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_6p25m.v
   C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/d_flipflop.v
   C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/resetswitch.v
+  C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/volume_display.v
+  C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/volume_display_seg.v
   C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being

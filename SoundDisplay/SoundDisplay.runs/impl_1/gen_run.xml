@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1616465099">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1616668189">
   <File Type="BITSTR-BMM" Name="Top_Student_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Top_Student_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Top_Student_timing_summary_init.rpt"/>
@@ -131,6 +131,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/volume_display.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/volume_display_seg.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/Top_Student.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Top_Student.v"/>
@@ -145,6 +159,12 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/picture.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>

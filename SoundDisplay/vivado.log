@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Mar 23 10:35:52 2021
-# Process ID: 14476
+# Start of session at: Thu Mar 25 18:27:41 2021
+# Process ID: 10980
 # Current directory: C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12940 C:\Users\Andre\Documents\GitHub\EE2026-Project\SoundDisplay\SoundDisplay.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16824 C:\Users\Andre\Documents\GitHub\EE2026-Project\SoundDisplay\SoundDisplay.xpr
 # Log file: C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/vivado.log
 # Journal file: C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay\vivado.jou
 #-----------------------------------------------------------
@@ -16,222 +16,65 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 884.043 ; gain = 157.539
 update_compile_order -fileset sources_1
-archive_project C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay.xpr.zip -temp_dir C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/.Xil/Vivado-14476-Riptide -force -include_local_ip_cache -include_config_settings
-INFO: [Coretcl 2-137] starting archive...
-INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/.Xil/Vivado-14476-Riptide' for archiving project
-Scanning sources...
-Finished scanning sources
-INFO: [Coretcl 2-1211] Creating project copy for archival...
-INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
-Current project path is 'C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/.Xil/Vivado-14476-Riptide/PrjAr/_X_'.
-INFO: [Coretcl 2-1213] Including run results for 'synth_1'
-INFO: [Coretcl 2-1213] Including run results for 'impl_1'
-INFO: [Coretcl 2-1209] Adding archive summary file to the project...
-INFO: [Coretcl 2-1214] Preparing project files for archive...
-INFO: [Coretcl 2-1210] Compressing project files and data...
-INFO: [Coretcl 2-1215] Project archived (C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay.xpr.zip)
-INFO: [Coretcl 2-1216] To view the archive summary log in GUI, double click on 'Design Sources->Text->archive_project_summary.txt', or open this file from the archived project directory.
-archive_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 893.145 ; gain = 0.000
-synth_design -rtl -name rtl_1
-Command: synth_design -rtl -name rtl_1
-Starting synth_design
-Using part: xc7a35tcpg236-1
-Top: Top_Student
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 977.758 ; gain = 81.262
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
-INFO: [Synth 8-6157] synthesizing module 'MUX_21' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'MUX_21' (1#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_20k' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_20k.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'clk_20k' (2#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_20k.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'Audio_Capture' (3#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
-INFO: [Synth 8-6157] synthesizing module 'clk_6p25m' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_6p25m.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'clk_6p25m' (4#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/clk_6p25m.v:23]
-INFO: [Synth 8-6157] synthesizing module 'resetswitch' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/resetswitch.v:23]
-INFO: [Synth 8-6157] synthesizing module 'd_flipflop' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/d_flipflop.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'd_flipflop' (5#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/d_flipflop.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'resetswitch' (6#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/resetswitch.v:23]
-INFO: [Synth 8-6157] synthesizing module 'DisplayModule' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:23]
-	Parameter green_bar bound to: 16'b0100011111100000 
-	Parameter yellow_bar bound to: 16'b1111111101100000 
-	Parameter red_bar bound to: 16'b1111100000000000 
-WARNING: [Synth 8-6090] variable 'oled_data' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:78]
-WARNING: [Synth 8-6090] variable 'oled_data' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:80]
-WARNING: [Synth 8-6090] variable 'oled_data' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:82]
-WARNING: [Synth 8-6090] variable 'oled_data' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:84]
-INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
-	Parameter Width bound to: 96 - type: integer 
-	Parameter Height bound to: 64 - type: integer 
-	Parameter PixelCount bound to: 6144 - type: integer 
-	Parameter PixelCountWidth bound to: 13 - type: integer 
-	Parameter ClkFreq bound to: 6250000 - type: integer 
-	Parameter FrameFreq bound to: 60 - type: integer 
-	Parameter FrameDiv bound to: 104166 - type: integer 
-	Parameter FrameDivWidth bound to: 17 - type: integer 
-	Parameter PowerDelay bound to: 20 - type: integer 
-	Parameter ResetDelay bound to: 3 - type: integer 
-	Parameter VccEnDelay bound to: 20 - type: integer 
-	Parameter StartupCompleteDelay bound to: 100 - type: integer 
-	Parameter MaxDelay bound to: 100 - type: integer 
-	Parameter MaxDelayCount bound to: 625000 - type: integer 
-	Parameter StateCount bound to: 32 - type: integer 
-	Parameter StateWidth bound to: 5 - type: integer 
-	Parameter PowerUp bound to: 5'b00000 
-	Parameter Reset bound to: 5'b00001 
-	Parameter ReleaseReset bound to: 5'b00011 
-	Parameter EnableDriver bound to: 5'b00010 
-	Parameter DisplayOff bound to: 5'b00110 
-	Parameter SetRemapDisplayFormat bound to: 5'b00111 
-	Parameter SetStartLine bound to: 5'b00101 
-	Parameter SetOffset bound to: 5'b00100 
-	Parameter SetNormalDisplay bound to: 5'b01100 
-	Parameter SetMultiplexRatio bound to: 5'b01101 
-	Parameter SetMasterConfiguration bound to: 5'b01111 
-	Parameter DisablePowerSave bound to: 5'b01110 
-	Parameter SetPhaseAdjust bound to: 5'b01010 
-	Parameter SetDisplayClock bound to: 5'b01011 
-	Parameter SetSecondPrechargeA bound to: 5'b01001 
-	Parameter SetSecondPrechargeB bound to: 5'b01000 
-	Parameter SetSecondPrechargeC bound to: 5'b11000 
-	Parameter SetPrechargeLevel bound to: 5'b11001 
-	Parameter SetVCOMH bound to: 5'b11011 
-	Parameter SetMasterCurrent bound to: 5'b11010 
-	Parameter SetContrastA bound to: 5'b11110 
-	Parameter SetContrastB bound to: 5'b11111 
-	Parameter SetContrastC bound to: 5'b11101 
-	Parameter DisableScrolling bound to: 5'b11100 
-	Parameter ClearScreen bound to: 5'b10100 
-	Parameter VccEn bound to: 5'b10101 
-	Parameter DisplayOn bound to: 5'b10111 
-	Parameter PrepareNextFrame bound to: 5'b10110 
-	Parameter SetColAddress bound to: 5'b10010 
-	Parameter SetRowAddress bound to: 5'b10011 
-	Parameter WaitNextFrame bound to: 5'b10001 
-	Parameter SendPixel bound to: 5'b10000 
-	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
-	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:124]
-INFO: [Synth 8-226] default block is never used [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:201]
-WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:349]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (7#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
-WARNING: [Synth 8-689] width (1) of port connection 'teststate' does not match port width (5) of module 'Oled_Display' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:95]
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:48]
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:49]
-INFO: [Synth 8-6155] done synthesizing module 'DisplayModule' (8#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/DisplayModule.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (9#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
-WARNING: [Synth 8-3331] design DisplayModule has unconnected port audio_in[11]
-WARNING: [Synth 8-3331] design DisplayModule has unconnected port audio_in[10]
-WARNING: [Synth 8-3331] design DisplayModule has unconnected port audio_in[9]
-WARNING: [Synth 8-3331] design DisplayModule has unconnected port audio_in[8]
-WARNING: [Synth 8-3331] design DisplayModule has unconnected port audio_in[7]
-WARNING: [Synth 8-3331] design DisplayModule has unconnected port audio_in[6]
-WARNING: [Synth 8-3331] design DisplayModule has unconnected port audio_in[5]
-WARNING: [Synth 8-3331] design DisplayModule has unconnected port audio_in[4]
-WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1022.129 ; gain = 125.633
----------------------------------------------------------------------------------
+add_files -norecurse C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/picture.mem
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Mar 25 18:28:34 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
 
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1022.129 ; gain = 125.633
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1022.129 ; gain = 125.633
----------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:71]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:71]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:72]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:72]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:73]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:73]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:74]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:74]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:75]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:75]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:76]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:76]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:77]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:77]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:78]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc:78]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
-Completed Processing XDC Constraints
 
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1370.391 ; gain = 473.895
-24 Infos, 25 Warnings, 8 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1370.391 ; gain = 473.895
-close [ open C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/volume_display.v w ]
-add_files C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/volume_display.v
-update_compile_order -fileset sources_1
-close [ open C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/volume_display_seg.v w ]
-add_files C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/volume_display_seg.v
-update_compile_order -fileset sources_1
-archive_project C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay.xpr.zip -temp_dir C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/.Xil/Vivado-14476-Riptide -force -include_local_ip_cache -include_config_settings
-INFO: [Coretcl 2-137] starting archive...
-INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/.Xil/Vivado-14476-Riptide' for archiving project
-Scanning sources...
-Finished scanning sources
-INFO: [Coretcl 2-1211] Creating project copy for archival...
-INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
-Current project path is 'C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/.Xil/Vivado-14476-Riptide/PrjAr/_X_'.
-INFO: [Coretcl 2-1213] Including run results for 'synth_1'
-INFO: [Coretcl 2-1213] Including run results for 'impl_1'
-INFO: [Coretcl 2-1209] Adding archive summary file to the project...
-INFO: [Coretcl 2-1214] Preparing project files for archive...
-INFO: [Coretcl 2-1210] Compressing project files and data...
-INFO: [Coretcl 2-1215] Project archived (C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay.xpr.zip)
-INFO: [Coretcl 2-1216] To view the archive summary log in GUI, double click on 'Design Sources->Text->archive_project_summary.txt', or open this file from the archived project directory.
-archive_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1403.066 ; gain = 3.148
-refresh_design
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1410.586 ; gain = 6.602
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
-INFO: [Synth 8-6157] synthesizing module 'MUX_21' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:23]
-INFO: [Synth 8-6157] synthesizing module 'volume_display' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/volume_display.v:23]
-WARNING: [Synth 8-6090] variable 'max' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/volume_display.v:78]
-INFO: [Synth 8-6155] done synthesizing module 'volume_display' (1#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/volume_display.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'levels' does not match port width (4) of module 'volume_display' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:30]
-WARNING: [Synth 8-689] width (1) of port connection 'led' does not match port width (16) of module 'volume_display' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:30]
-INFO: [Synth 8-6155] done synthesizing module 'MUX_21' (2#1) [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/MUX_21.v:23]
-WARNING: [Synth 8-689] width (12) of port connection 'led' does not match port width (16) of module 'volume_display' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:38]
-ERROR: [Synth 8-439] module 'volume_display_seg' not found [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:39]
-ERROR: [Synth 8-6156] failed synthesizing module 'Top_Student' [C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1452.961 ; gain = 48.977
----------------------------------------------------------------------------------
-RTL Elaboration failed
-refresh_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1453.000 ; gain = 49.016
-ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
-update_compile_order -fileset sources_1
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183715000A
+set_property PROGRAM.FILE {C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+[Thu Mar 25 18:29:49 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Mar 25 18:31:06 2021] Launched impl_1...
+Run output will be captured here: C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Andre/Documents/GitHub/EE2026-Project/SoundDisplay/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 25 18:32:31 2021...
