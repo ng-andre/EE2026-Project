@@ -41,15 +41,50 @@ module DisplayModule(
     parameter [15:0] yellow_bar = 16'hFF60;
     parameter [15:0] red_bar = 16'hF800;
 
-    reg [15:0] picture[6443:0];
+    reg [3:0] position_x = 3;
+    reg [3:0] position_y = 3;
+
+
+    reg [15:0] picture[0:6443];
+    reg [15:0] square1[0:6443];
+    reg [15:0] square2[0:6443];
+    reg [15:0] square3[0:6443];
+    reg [15:0] square4[0:6443];
+    reg [15:0] square5[0:6443];
+    reg [15:0] square6[0:6443];
+    reg [15:0] square7[0:6443];
+    reg [15:0] square8[0:6443];
+    reg [15:0] square9[0:6443];
+
     initial begin
-        $readmemh("picture.mem", picture);
+        $readmemh("image.mem", picture);
+        $readmemh("square1.mem", square1);
+        $readmemh("square2.mem", square2);
+        $readmemh("square3.mem", square3);
+        $readmemh("square4.mem", square4);
+        $readmemh("square5.mem", square5);
+        $readmemh("square6.mem", square6);
+        $readmemh("square7.mem", square7);
+        $readmemh("square8.mem", square8);
+        $readmemh("square9.mem", square9);
+//        $readmemh("square1.mem", square1);
+
+
+    end
+
+    always @ (*) begin
+        
+        
+        
     end
 
     always @ (posedge clk6p25m) begin    
-        //border
-//        y = pixel_index / 96;
-//        x = pixel_index % 96;
+        oled_data = square1[pixel_index];
+        
+        y = pixel_index / 96;
+        x = pixel_index % 96;
+        
+        
 //        if (switch_left) 
 //            offset <= -10;
 //        else if (switch_right) 
@@ -122,7 +157,6 @@ module DisplayModule(
 //                end
 //            end
 //        if (picture_switch) begin
-            oled_data = picture[pixel_index];
 //        end
     end
         
