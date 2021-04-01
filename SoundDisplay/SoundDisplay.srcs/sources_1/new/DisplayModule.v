@@ -23,7 +23,8 @@
 module DisplayModule(
     input clk6p25m,
     output cs, sdin, sclk, d_cn, resn, vccen, pmoden,//output of OLED display
-    input border_switch, input volume_active, input [15:0] audio_in, input switch_left, input switch_right, input picture_switch
+    input border_switch, input volume_active, input [15:0] audio_in, input switch_left, input switch_right, input picture_switch,
+    input btnU, btnC, btnL, btnR, btnD
     );
     
     reg [15:0] colour_data;
@@ -31,8 +32,12 @@ module DisplayModule(
     wire [12:0] pixel_index; // 0 to 6143, 96x64 pixels
     reg [6:0] x = 0;
     reg [6:0] y = 0;
+    reg [6:0] x_pos = 50;
+    reg [6:0] y_pos = 50;
     reg reset = 0;
     reg [6:0] offset = 0;
+    reg [15:0] new_index = 0;
+    reg [6:0] y_temp = 0;
     
     wire frame_begin, sending_pixels, sample_pixel, teststate;
 
@@ -40,124 +45,67 @@ module DisplayModule(
     parameter [15:0] green_bar = 16'h47E0;
     parameter [15:0] yellow_bar = 16'hFF60;
     parameter [15:0] red_bar = 16'hF800;
+    reg startstate = 0;
+    
 
-    reg [3:0] position_x = 3;
-    reg [3:0] position_y = 3;
-
-
-    reg [15:0] picture[0:6443];
-    reg [15:0] square1[0:6443];
-    reg [15:0] square2[0:6443];
-    reg [15:0] square3[0:6443];
-    reg [15:0] square4[0:6443];
-    reg [15:0] square5[0:6443];
-    reg [15:0] square6[0:6443];
-    reg [15:0] square7[0:6443];
-    reg [15:0] square8[0:6443];
-    reg [15:0] square9[0:6443];
+    reg [14:0] picture[0:24576];
+    reg [12:0] menu[0:6443];
+//    reg [15:0] square2[0:6443];
+//    reg [15:0] square3[0:6443];
+//    reg [15:0] square4[0:6443];
+//    reg [15:0] square5[0:6443];
+//    reg [15:0] square6[0:6443];
+//    reg [15:0] square7[0:6443];
+//    reg [15:0] square8[0:6443];
+//    reg [15:0] square9[0:6443];
 
     initial begin
         $readmemh("image.mem", picture);
-        $readmemh("square1.mem", square1);
-        $readmemh("square2.mem", square2);
-        $readmemh("square3.mem", square3);
-        $readmemh("square4.mem", square4);
-        $readmemh("square5.mem", square5);
-        $readmemh("square6.mem", square6);
-        $readmemh("square7.mem", square7);
-        $readmemh("square8.mem", square8);
-        $readmemh("square9.mem", square9);
+        $readmemh("mainmenu.mem", menu);
+//        $readmemh("square2.mem", square2);
+//        $readmemh("square3.mem", square3);
+//        $readmemh("square4.mem", square4);
+//        $readmemh("square5.mem", square5);
+//        $readmemh("square6.mem", square6);
+//        $readmemh("square7.mem", square7);
+//        $readmemh("square8.mem", square8);
+//        $readmemh("square9.mem", square9);
 //        $readmemh("square1.mem", square1);
 
 
     end
 
     always @ (*) begin
-        
-        
-        
+        if (btnU) begin 
+            if (y_pos > 0) 
+            y_pos = y_pos - 1;
+        end
+        if (btnD) begin 
+            if (y_pos < 64)
+            y_pos = y_pos + 1;
+        end        
+        if (btnR) begin 
+            if (x_pos < 96)
+            x_pos = x_pos + 1;
+        end        
+        if (btnL) begin 
+            if (x_pos > 0)
+            x_pos = x_pos - 1;
+        end        
     end
 
     always @ (posedge clk6p25m) begin    
-        oled_data = square1[pixel_index];
+//        case (position) 
+        if (startstate == 0) 
+            oled_data <= menu[pixel_index];
+       
         
         y = pixel_index / 96;
         x = pixel_index % 96;
+        new_index <= (x + x_pos) + (192*(y + y_pos));
         
-        
-//        if (switch_left) 
-//            offset <= -10;
-//        else if (switch_right) 
-//            offset <= 10;
-//        else 
-//            offset <= 0;
-        
-        
-//        //start border
-//        if (border_switch) begin //3 pixel wide border
-//            if (y == 0 || y == 1 || y == 2)
-//                 oled_data <= 16'b1111111111111111;//border_colour;
-//            else if (y == 63 || y == 62 || y == 61)
-//                 oled_data <= 16'b1111111111111111;// border_colour;
-//            else if (x == 0 || x == 1 || x == 2)
-//                 oled_data <= 16'b1111111111111111;// border_colour;
-//            else if (x == 95 || x == 94 || x == 93)
-//                 oled_data <= 16'b1111111111111111;// border_colour;       
-//            else 
-//                oled_data <= 16'b0;
-//        end
-//        else if (~border_switch) begin //1 pixel wide border
-//            if (y == 0)
-//                 oled_data <= 16'b1111111111111111;//border_colour;
-//            else if (y == 63)
-//                 oled_data <= 16'b1111111111111111;// border_colour;
-//            else if (x == 0)
-//                 oled_data <= 16'b1111111111111111;// border_colour;
-//            else if (x == 95)
-//                 oled_data <= 16'b1111111111111111;// border_colour;       
-//            else 
-//                oled_data <= 16'b0;
-//        end
-//        if (volume_active) begin //switch
-//            if ((x + offset) > 42 && (x + offset) < 53) begin
-//                if ((y == 55 || y == 54) && (audio_in[0] == 1))  
-//                    oled_data <= green_bar;
-//                else if ((y == 52 || y == 51) && (audio_in[1] == 1))
-//                    oled_data <= green_bar;
-//                else if ((y == 49 || y == 48) && (audio_in[2] == 1))
-//                    oled_data <= green_bar;
-//                else if ((y == 46 || y == 45) && (audio_in[3] == 1))
-//                    oled_data <= green_bar; 
-//                else if ((y == 43 || y == 42) && (audio_in[4] == 1))
-//                    oled_data <= green_bar; 
-//                else if ((y == 41 || y == 40) && (audio_in[5] == 1))
-//                    oled_data <= yellow_bar; 
-//                else if ((y == 38 || y == 37) && (audio_in[6] == 1))
-//                    oled_data <= yellow_bar;
-//                else if ((y == 35 || y == 34) && (audio_in[7] == 1))    
-//                    oled_data <= yellow_bar;
-//                else if ((y == 32 || y == 31) && (audio_in[8] == 1))    
-//                    oled_data <= yellow_bar;
-//                else if ((y == 29 || y == 28) && (audio_in[9] == 1))    
-//                    oled_data <= yellow_bar;
-//                else if ((y == 26 || y == 25) && (audio_in[10] == 1))
-//                    oled_data <= red_bar;    
-//                else if ((y == 23 || y == 22) && (audio_in[11] == 1))    
-//                    oled_data <= red_bar;
-//                else if ((y == 20 || y == 19) && (audio_in[12] == 1))    
-//                    oled_data <= red_bar; 
-//                else if ((y == 17 || y == 16) && (audio_in[13] == 1))
-//                    oled_data <= red_bar;
-//                else if ((y == 14 || y == 13) && (audio_in[14] == 1))
-//                    oled_data <= red_bar;
-//                else if ((y == 11 || y == 10) && (audio_in[15] == 1))
-//                    oled_data <= 16'hFFFF;
-////                else 
-////                    oled_data <= 16'b0;
-//                end
-//            end
-//        if (picture_switch) begin
-//        end
+
+
     end
         
     Oled_Display Oled_Display (clk6p25m, reset, frame_begin, sending_pixels,

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09.03.2021 11:27:17
+// Create Date: 28.03.2021 22:51:20
 // Design Name: 
-// Module Name: resetswitch
+// Module Name: clock_3hz
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,18 +20,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module resetswitch(
-    input clk,
-    input button,
-    output active
+module clock_3hz(
+    input CLOCK,
+    output reg clk
     );
+
+    reg [25:0] counter = 0;
     
-    wire C1;
-    wire C2;
+    initial begin
+        clk = 0;
+    end
     
-    d_flipflop dff1 (clk, button, C1);
-    d_flipflop dff2 (clk, C1, C2);
-    
-    assign active = C1 & C2;
+    always @ (posedge CLOCK) begin
+        counter <= counter + 1;
+        if (counter == 25'd16800000) begin //roll over after 0.336 seconds
+            counter <= 0;
+            clk <= ~clk;
+        end
+    end
     
 endmodule
+
