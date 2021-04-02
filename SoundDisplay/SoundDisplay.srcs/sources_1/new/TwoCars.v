@@ -35,6 +35,9 @@ module TwoCars(
     reg [6:0] offset = 0;
     reg [15:0] new_index = 0;
     reg [12:0] gameover[0:6443];
+    
+    reg [4:0] outputrng;
+    reg [9:0] score = 0;
 
     wire frame_begin, sending_pixels, sample_pixel, teststate;
 
@@ -58,6 +61,15 @@ module TwoCars(
     reg [6:0] y3 = 44;
     reg [6:0] x4 = 96;
     reg [6:0] y4 = 59;
+    
+    reg [6:0] x5 = 96;
+    reg [6:0] y5 = 4;
+    reg [6:0] x6 = 96;
+    reg [6:0] y6 = 20;
+    reg [6:0] x7 = 96;
+    reg [6:0] y7 = 44;
+    reg [6:0] x8 = 96;
+    reg [6:0] y8 = 59;
 
     reg [6:0] x1_offset = 0;
     reg [6:0] y1_offset = 0;
@@ -67,8 +79,16 @@ module TwoCars(
     reg [6:0] y3_offset = 0;
     reg [6:0] x4_offset = 0;
     reg [6:0] y4_offset = 0;
+    reg [6:0] x5_offset = 0;
+    reg [6:0] y5_offset = 0;
+    reg [6:0] x6_offset = 0;
+    reg [6:0] y6_offset = 0;
+    reg [6:0] x7_offset = 0;
+    reg [6:0] y7_offset = 0;
+    reg [6:0] x8_offset = 0;
+    reg [6:0] y8_offset = 0;
     
-    //clocks
+//    rng(CLOCK, RESET, outputrng[3:0]);
     
 
 
@@ -133,36 +153,34 @@ module TwoCars(
         //obstacles
         if ((x > (x1 - x1_offset) && x < (x1 - x1_offset + 5)) && (y > (y1 + y1_offset) && y < (y1 + y1_offset + 5)))
                 oled_data <= 16'h0;
+        if ((x > (x2 - x2_offset) && x < (x2 - x2_offset + 5)) && (y > (y2 + y2_offset) && y < (y2 + y2_offset + 5)))
+                oled_data <= 16'h0;
         if ((x > (x3 - x3_offset) && x < (x3 - x3_offset + 5)) && (y > (y3 + y3_offset) && y < (y3 + y3_offset + 5)))
                 oled_data <= 16'h0;
-//        else begin
-//            if ((x > 6 && x < 13) && (y > 20 && y < 27))
-//                oled_data <= 16'hF800;
-//        end
-//        if (lane_car2) begin
-//            if ((x > 6 && x < 13) && (y > 37 && y < 44))
-//                oled_data <= 16'h025F;
-//        end 
+        if ((x > (x4 - x4_offset) && x < (x4 - x4_offset + 5)) && (y > (y4 + y4_offset) && y < (y4 + y4_offset + 5)))
+                oled_data <= 16'h0;
+        //points
+        if ((x > (x5 - x5_offset) && x < (x5 - x5_offset + 5)) && (y > (y5 + y1_offset) && y < (y5 + y5_offset + 5)))
+                oled_data <= 16'hFFFF;
+        if ((x > (x6 - x6_offset) && x < (x6 - x6_offset + 5)) && (y > (y6 + y6_offset) && y < (y6 + y6_offset + 5)))
+                oled_data <= 16'hFFFF;
+        if ((x > (x7 - x7_offset) && x < (x7 - x7_offset + 5)) && (y > (y7 + y7_offset) && y < (y7 + y7_offset + 5)))
+                oled_data <= 16'hFFFF;
+        if ((x > (x8 - x8_offset) && x < (x8 - x8_offset + 5)) && (y > (y8 + y8_offset) && y < (y8 + y8_offset + 5)))
+                oled_data <= 16'hFFFF;
+                
         if (x1_offset == 96)
             x1_offset <= 0;
 //         || x2_offset == 90 || x3_offset == 90 || x4_offset == 90)
-        if (x1_offset == 80 && lane_car1)
+        if ((x1_offset == 85 && lane_car1) || (x2_offset == 85 && ~lane_car1))
+            gameoverflag = 1;
+        if ((x5_offset == 85 && ~lane_car1) || (x6_offset == 85 && lane_car1))
             gameoverflag = 1;
 
         if (gameoverflag)
             oled_data <= gameover[pixel_index];
 
     end
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
